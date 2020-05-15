@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TabLayout.Profile.ProfileTabFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/dimen124"
+            android:layout_height="@dimen/dimen124"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:layout_marginTop="@dimen/dimen150"
+            android:layout_marginBottom="@dimen/dimen30"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/my_pict"
+            app:civ_border_width="2dp"
+            android:layout_marginStart="@dimen/dimen30" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:text="@string/nav_header_title"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dimen25"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView1"
+            android:layout_centerHorizontal="true"
+            android:text="@string/myDescription"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/dimen22"
+            android:gravity="center"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+</RelativeLayout>

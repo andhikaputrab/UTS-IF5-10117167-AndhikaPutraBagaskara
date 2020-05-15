@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home"/>
+        <item
+            android:id="@+id/nav_daily"
+            android:icon="@drawable/ic_menu_daily"
+            android:title="@string/menu_daily" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery2"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_music_video"
+            android:icon="@drawable/ic_menu_music_video"
+            android:title="@string/menu_music_video"/>
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="@string/menu_my_profile"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Exit">
+            <menu>
+                <item
+                    android:id="@+id/nav_exit"
+                    android:icon="@drawable/ic_exit"
+                    android:title="@string/menu_exit"/>
+            </menu>
+        </item>
+    </group>
+
+</menu>

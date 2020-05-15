@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn=".WelcomeActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen30"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen50"
+        android:gravity="center"
+        android:orientation="horizontal"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha=".5"
+        android:layout_above="@id/layoutDots"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:layout_marginBottom="@dimen/dimen3"
+        android:text="@string/btn_next"
+        android:textSize="@dimen/dimen20"
+        android:textColor="#69F0AE"
+        android:layout_marginRight="@dimen/dimen5"
+        tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:layout_marginBottom="@dimen/dimen3"
+        android:text="@string/btn_skip"
+        android:textSize="@dimen/dimen20"
+        android:textColor="#69F0AE"
+        android:layout_marginLeft="@dimen/dimen5"
+        tools:ignore="RtlHardcoded" />
+</RelativeLayout>

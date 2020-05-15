@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.apps.andhikaapps.Menu.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_menu_home">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_daily"
+        android:name="com.apps.andhikaapps.Menu.ui.daily.DailyActivityFragment"
+        android:label="@string/menu_daily"
+        tools:layout="@layout/fragment_menu_daily" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.apps.andhikaapps.Menu.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_menu_gallery" />
+
+    <fragment
+        android:id="@+id/nav_music_video"
+        android:name="com.apps.andhikaapps.Menu.ui.music_video.MusicVideoFragment"
+        android:label="@string/menu_music_video"
+        tools:layout="@layout/fragment_menu_music_video">
+
+        <action
+            android:id="@+id/action_MusicVideoFragment_to_MusicListFragment"
+            app:destination="@id/nav_music_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_music_list"
+        android:name="com.apps.andhikaapps.Menu.ui.music_video.MusicListFragment"
+        android:label="@string/menu_music_video"
+        tools:layout="@layout/fragment_music_list">
+
+        <action
+            android:id="@+id/action_MusicListFragment_to_MusicPlayerFragment"
+            app:destination="@id/nav_music_player"/>
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_music_player"
+        android:name="com.apps.andhikaapps.Menu.ui.music_video.MusicPlayerFragment"
+        android:label="@string/music_player"
+        tools:layout="@layout/fragment_music_player">
+        <action
+            android:id="@+id/action_MusicPlayerFragment_to_MusicVideoFragment"
+            app:destination="@id/nav_music_video"/>
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_my_profile"
+        android:name="com.apps.andhikaapps.Menu.ui.profile.MyProfileFragment"
+        android:label="@string/menu_my_profile"
+        tools:layout="@layout/fragment_menu_my_profile"/>
+
+</navigation>

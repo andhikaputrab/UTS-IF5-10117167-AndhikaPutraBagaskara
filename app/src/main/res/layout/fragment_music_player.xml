@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_musicplayer"
+    tools:context=".Menu.ui.music_video.MusicPlayerFragment">
+
+    <Toolbar
+        android:id="@+id/toolbarmusicplayer"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg_header"
+        app:popupTheme="@style/AppTheme.Main.PopupOverlay"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_weight="7"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/cover_art"
+                android:id="@+id/album_art"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtSongLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="song name"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                tools:ignore="UselessParent">
+
+                <SeekBar
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/songSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    />
+                <Button
+                    android:layout_marginTop="5dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/pause"
+                    android:id="@+id/pause"/>
+
+                <Button
+
+                    android:id="@+id/next"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/pause"
+                    android:background="@drawable/ic_skip_next_black_24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/pause"
+                    android:layout_marginStart="20dp" />
+
+                <Button
+                    android:id="@+id/previous"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/pause"
+                    android:background="@drawable/ic_skip_previous_black_24dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/pause" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
